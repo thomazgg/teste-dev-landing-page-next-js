@@ -1,4 +1,4 @@
-// app/page.tsx
+// File: src/app/page.tsx
 import MenuBar from "@/components/utils/MenuBar";
 import Hero from "@/sections/Hero";
 import Advantages from "@/sections/Advantages";
@@ -12,15 +12,15 @@ import Footer from "@/sections/Footer";
 export default function Home() {
   return (
     <>
-      <MenuBar />
+      <MenuBar activePage="/" />
       <Hero />
-      {/* <Advantages />
+      <Advantages />
       <HowItWorks />
       <Testimonials />
       <Stats />
       <FAQ />
       <RegisterWarehouse />
-      <Footer /> */}
+      <Footer />
     </>
   );
 }

@@ -9,11 +9,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary: 'bg-primary-500 hover:bg-primary-600 text-white',
-        secondary: 'bg-primary-100 hover:bg-primary-200 text-primary-800',
+        secondary: 'bg-secondary-400 hover:bg-secondary-300 text-white',
+        tertiary: 'bg-primary-100 hover:bg-primary-200 text-primary-800',
         gray: 'bg-gray-100 hover:bg-gray-300',
-        outline: 'bg-transparent border-2 border-gray-200 hover:bg-gray-200',
+        outline: 'bg-transparent border border-gray-500 hover:bg-secondary-500 text-secondary-500 hover:text-white',
         ghost: 'bg-transparent hover:bg-gray-200 data-[state=open]:bg-transparent',
-        inverset: 'bg-transparent hover:bg-primary-500 data-[state=open]:bg-transparent text-white',
+        inverset: 'bg-transparent hover:bg-secondary-400 data-[state=open]:bg-transparent text-white',
       },
       size: {
         sm: 'h-10 px-2.5 text-sm',

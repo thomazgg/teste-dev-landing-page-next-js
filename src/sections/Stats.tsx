@@ -1,22 +1,25 @@
-// sections/Stats.tsx
+// File: src/sections/Stats.tsx
 export default function Stats() {
   const stats = [
-    { label: "Armazéns cadastrados", value: 120 },
-    { label: "Produtos gerenciados", value: 4500 },
-    { label: "Usuários ativos", value: 890 },
+    { label: "Armazéns cadastrados", value: "+5384" },
+    { label: "Check-ins", value: "+4268" },
+    { label: "Armazéns ocupados", value: "%85" },
   ];
 
   return (
-    <section className="bg-blue-50 py-20 px-6 max-w-5xl mx-auto text-center">
-      <h2 className="text-3xl font-bold mb-12">Nossos números</h2>
+    <section className="relative container-large py-40 bg-white text-center">
+      <h2 className="text-center text-secondary-500 mb-10">Nossos números</h2>
       <div className="flex justify-center gap-16 flex-wrap">
         {stats.map(({ label, value }) => (
-          <div key={label} className="min-w-[150px]">
-            <p className="text-4xl font-extrabold text-blue-600">{value}</p>
-            <p className="mt-2 text-lg font-medium">{label}</p>
+          <div key={label} className="flex flex-col flex-1">
+            <h2 className="text-primary-500">{value}</h2>
+            <p className="m3 mt-2">{label}</p>
           </div>
         ))}
       </div>
+
+      {/* Linha no fundo */}
+      <div className="absolute bottom-0 left-0 w-full h-[6px] bg-color-gradient-1" />
     </section>
   );
 }

@@ -1,24 +1,37 @@
-// sections/Testmonials.tsx
+// File: src/sections/Testimonials.tsx
+import StarRating from "@/components/utils/StarRating";
+
 export default function Testimonials() {
   const testimonials = [
     {
+      rating: 5,
       name: "Carlos Silva",
-      text: "Esse sistema transformou a gestão do meu armazém, muito prático e confiável!",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
+      rating: 4,
       name: "Maria Oliveira",
-      text: "O suporte é excelente e o controle ficou muito mais eficiente.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    },
+    {
+      rating: 5,
+      name: "João Martins",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
   ];
 
   return (
-    <section className="py-20 px-6 max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold mb-10 text-center">Depoimentos</h2>
-      <div className="space-y-10">
-        {testimonials.map(({ name, text }) => (
-          <blockquote key={name} className="bg-gray-100 p-6 rounded-lg shadow-md">
-            <p className="italic mb-4">"{text}"</p>
-            <footer className="text-right font-semibold">- {name}</footer>
+    <section className="container-large py-40 bg-gray-100 bg-[url('/assets/testimonials.svg')] bg-no-repeat bg-bottom">
+      <h2 className="text-center text-secondary-500 mb-10">Depoimentos</h2>
+      <div className="flex flex-wrap gap-10">
+        {testimonials.map(({ name, text, rating }) => (
+          <blockquote
+            key={name}
+            className="flex flex-col flex-1 w-full sm:min-w-[420px] p-8 bg-white rounded-2xl"
+          >
+            <StarRating rating={rating} />
+            <p className="r4 text-gray-800 mb-4">"{text}"</p>
+            <p className="sb4 mt-auto text-secondary-500">— {name}</p>
           </blockquote>
         ))}
       </div>

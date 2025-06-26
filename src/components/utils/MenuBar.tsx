@@ -2,16 +2,21 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import LinkBtnWhite from "@/components/ui/LinkBtnWhite/LinkBtnWhite";
 import { UserCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import LinkBtnWhite from "@/components/ui/LinkBtnWhite/LinkBtnWhite";
+import { pages } from "@/data/pages";
 
-const MenuBar: React.FC = () => {
+interface MenuBarProps {
+  activePage?: string;
+}
+
+const MenuBar: React.FC<MenuBarProps> = ({ activePage }) => {
   return (
-    <header className="container-large flex flex-col justify-center w-full h-[120px] bg-secondary-500">
-      <div className="relative flex items-center justify-between lg:justify-center">
+    <header className="container-large bg-secondary-500">
+      <div className="relative flex items-center justify-between h-[120px]">
         {/* Esquerda */}
-        <div className="flex flex-1 justify-start items-center gap-3">
+        <div className="flex md:flex-1 justify-start items-center gap-3">
           <Link href="/" className="block w-full h-[48px] relative">
             <Image
               src="/assets/Logo.svg"
@@ -24,32 +29,30 @@ const MenuBar: React.FC = () => {
         </div>
 
         {/* Centro */}
-        <div className="flex flex-1 justify-center items-center gap-10">
-          <Link href="/">
-            <LinkBtnWhite text="Home" className="sb4" />
-          </Link>
-          <Link href="/sobre">
-            <LinkBtnWhite text="Sobre" className="sb4" />
-          </Link>
-          <Link href="/servicos">
-            <LinkBtnWhite text="Serviços" className="sb4" />
-          </Link>
-          <Link href="/contato" target="_blank">
-            <LinkBtnWhite text="Contato" className="sb4" />
-          </Link>
-        </div>
+        <nav className="hidden md:flex flex-1 justify-center items-center gap-10">
+          {pages.map((page) => (
+            <LinkBtnWhite
+              key={page.href}
+              href={page.href}
+              target="_self"
+              text={page.label}
+              className={`sb4 ${
+                activePage === page.href ? "opacity-100" : "opacity-70"
+              }`}
+            />
+          ))}
+        </nav>
 
         {/* Direita */}
-        <div className="flex flex-1 justify-end items-center gap-3">
-          <Button size="md" variant="primary" className="w-full md:w-fit">
+        <div className="hidden sm:flex md:flex-1 justify-end items-center gap-3">
+          <Button size="md" variant="secondary" className="w-fit">
             <span>Anuncie seu galpão</span>
           </Button>
-          <Button size="md" variant="inverset" className="w-full md:w-fit">
+          <Button size="md" variant="inverset" className="w-fit">
             <span>Entrar na conta</span>
             <UserCircle className="w-6 h-6" />
           </Button>
         </div>
-
       </div>
     </header>
   );
