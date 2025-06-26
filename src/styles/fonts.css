@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* TEXT STYLES
+----------------------------------------------------------------------------- */
+
+/* Headlines  */
+.h1 {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+}
+
+.h2 {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+}
+
+.h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0em;
+}
+
+/* Text Semibold */
+.sb1 {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.sb2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0em;
+}
+
+.sb3 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0em;
+}
+
+.sb4 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0em;
+}
+
+.sb5 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0em;
+}
+
+.sb6 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0em;
+}
+
+.sb7 {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+/* Text medium */
+.m1 {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.m2 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.m3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0em;
+}
+
+.m4 {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0em;
+}
+
+.m5 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0em;
+}
+
+.m6 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0em;
+}
+
+.m7 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+/* Text Regular */
+.r1 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.r2 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.r3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.r4 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.r5 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.r6 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0em;
+}
+
+.r7 {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+/* FONT STYLES
+----------------------------------------------------------------------------- */
+
+p {
+    color: var(--base-text);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+a {
+    color: var(--base-text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}

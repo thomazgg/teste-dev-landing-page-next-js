@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--base-background);
+  color: var(--base-text);
+}
+
+/* Headlines
+----------------------------------------------------------------------------- */
+
+h1 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0em;
+}
+
+/* Variables
+----------------------------------------------------------------------------- */
+
+:root {
+  --grid--app-margin: 2.5rem;
+  --grid--app-columns: var(--grid--app-columns-12);
+  --grid--app-columns-12: repeat(12, [col-start] 1fr);
+  --grid--app-columns-6: repeat(6, [col-start] 1fr);
+  --grid--app-columns-4: repeat(4, [col-start] 1fr);
+  --grid--app-columns-3: repeat(3, [col-start] 1fr);
+  --grid--app-columns-2: repeat(2, [col-start] 1fr);
+  --grid--app-columns-1: repeat(1, [col-start] 1fr);
+  --container-padding: clamp(2.5em, 8vw, 8em);
+}
+
+@media (max-width: 1280px) {
+  :root {
+    --grid--app-margin: 1.25rem;
+    --grid--app-columns: var(--grid--app-columns-3);
+    --container-padding: var(--grid--app-margin);
+  }
+}
+
+/* Custom Scrollbar
+----------------------------------------------------------------------------- */
+
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--base-white);
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+*,:after,:before{
+  box-sizing:inherit
+} */
+
+/* Main Components
+----------------------------------------------------------------------------- */
+
+.section {
+  padding-left: calc(var(--grid--app-margin));
+  padding-right: calc(var(--grid--app-margin));
+}
+
+.container-large {
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-medium {
+  padding-left: calc(var(--container-padding) * 2);
+  padding-right: calc(var(--container-padding) * 2);
+}
+
+.container-small {
+  padding-left: calc(var(--container-padding) * 3);
+  padding-right: calc(var(--container-padding) * 3);
+}
+
+.container-no-padding {
+  padding-left: unset;
+  padding-right: unset;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.loop {
+  display: flex;
+  overflow: hidden;
+}
+
+.loop-track {
+  display: flex;
+  animation: scroll 10s linear infinite;
+}
+
+.circle-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* margin-top: -200px; */
+  z-index: -1;
+}
+
+.circle-container {
+  position: relative;
+  height: 30px;
+}
+
+.circle-container .circle-footer {
+  position: absolute;
+  height: 1000%;
+  width: 120%;
+  top: -600%;
+  left: -10%;
+  background-color: var(--base-background);
+  border-radius: 50% 50% 50% 50%;
+}
+
+.circle-container .circle {
+  position: absolute;
+  height: 3000%;
+  width: 120%;
+  left: -10%;
+  background-color: var(--gray-800);
+  border-radius: 50%;
+}
+
+/* Screen Sizes
+----------------------------------------------------------------------------- */
+
+/* === Large Screens === */
+
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+/* === Medium Screens ===  */
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .container-large {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+
+  .container-medium {
+    padding-left: calc(var(--container-padding));
+    padding-right: calc(var(--container-padding));
+  }
+
+  .container-small {
+    padding-left: calc(var(--container-padding));
+    padding-right: calc(var(--container-padding));
+  }
+}
+
+/* === Small Screens === */
+
+@media (max-width: 640px) {}
