@@ -1,4 +1,4 @@
-# 🧪 Teste Desenvolvedor Front-End - Landing Page estilo Airbnb
+# 🧪 Teste Desenvolvedor Front-End em Next.js
 
 Este projeto foi desenvolvido como parte de um teste técnico para a vaga de desenvolvedor front-end. O objetivo é criar uma landing page inspirada no estilo do Airbnb, com base no layout fornecido no Figma.
   
