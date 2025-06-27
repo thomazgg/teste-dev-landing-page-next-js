@@ -49,7 +49,7 @@ Abra o link abaixo para visualizar o projeto:
 http://localhost:3000
 ```
 
-## 📁 Estrutura de Pastas (exemplo)
+## 📁 Estrutura de Pastas
 
 ```bash
 ├── app/                # Páginas e rotas do Next.js
