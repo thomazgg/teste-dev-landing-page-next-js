@@ -7,7 +7,7 @@ export default function RegisterWarehouse() {
   return (
     <section className="relative bg-secondary-500">
       {/* Conteúdo sobreposto */}
-      <div className="container-large relative flex flex-col lg:flex-row gap-12 py-40 z-10">
+      <div className="container-large relative flex flex-col lg:flex-row gap-12 py-40 z-20">
         {/* Coluna Esquerda */}
         <div className="flex flex-col gap-2 w-full">
           <h2 className="text-white">Cadastre seu armazém</h2>
@@ -53,7 +53,6 @@ export default function RegisterWarehouse() {
           alt="Armazém"
           height={674}
           width={1920}
-          objectFit="cover"
         />
       </div>
     </section>

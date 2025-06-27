@@ -1,33 +1,49 @@
-// src/components/form/FormField.tsx
-import { InputHTMLAttributes, forwardRef } from 'react';
+// File: src/components/ui/FormField.tsx
+import { forwardRef, InputHTMLAttributes, useId } from 'react';
 import { cn } from '@/lib/utils';
 
-interface FormFieldProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface FormFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
-  required?: boolean;
+  error?: string;
+  id?: string; // opcional, para o input e label
 }
 
 const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
-  ({ label, required = false, className, ...props }, ref) => {
+  ({ label, error, id, className, ...props }, ref) => {
+    const generatedId = useId();
+    const inputId = id || generatedId;
+    const errorId = `${inputId}-error`;
+
     return (
-      <div className="flex flex-col gap-1">
-        <label className="sb4 text-secondary-500">
-          {label} {required && <span className="text-red-500">*</span>}
+      <div className="flex flex-col gap-1 relative">
+        <label htmlFor={inputId} className="sb4 text-secondary-500">
+          {label}
         </label>
         <input
+          id={inputId}
           ref={ref}
-          required={required}
+          aria-invalid={!!error}
+          aria-describedby={error ? errorId : undefined}
           className={cn(
-            'p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500',
+            'p-2 rounded border',
+            error ? 'border-red-500' : 'border-gray-300',
             className
           )}
           {...props}
         />
+        {error && (
+          <span
+            id={errorId}
+            role="alert"
+            className="r6 text-red-500 mt-1"
+          >
+            {error}
+          </span>
+        )}
       </div>
     );
   }
 );
 
 FormField.displayName = 'FormField';
-
 export default FormField;

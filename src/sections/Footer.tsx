@@ -1,4 +1,4 @@
-import Link from "next/link";
+// src/sections/Footer.tsx
 import Image from "next/image";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import LinkBtnWhite from "@/components/ui/LinkBtnWhite/LinkBtnWhite";

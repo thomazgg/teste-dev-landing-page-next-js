@@ -2,7 +2,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
+import { motion, useMotionValue, animate, useInView } from 'framer-motion';
 
 function AnimatedNumber({ value, start }: { value: number; start: boolean }) {
   const count = useMotionValue(0);
